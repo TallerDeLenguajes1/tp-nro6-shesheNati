@@ -57,7 +57,10 @@ namespace punto_3
                     case 10:
                         ParteEntera();
                         break;
+                    case 11:
                     case 0:
+                        MaxMin();
+                        break;
                         Console.Write("¿Esta seguro que desea salir? si/no:(1 es si y 0 es no) "); //Si para realizarlo de nuevo y no para salir.
                         resp = Console.ReadLine();
                         if (resp == "1")
@@ -223,12 +226,15 @@ namespace punto_3
         }
         static void MaxMin()
         {
-            int num1, num2;
-            Console.WriteLine("El maximo y Minimo entre dos numeros");
-            Console.WriteLine("     Ingrese un numero");
-            num1 = int.Parse(Console.ReadLine);
-            Console.WriteLine("     Ingrese otro numero");
-            num2 = int.Parse(Console.WriteLine);
+            int n1, n2;
+            Console.WriteLine("Calculamos el maximo y minimo entre dos numeros");
+            Console.WriteLine("Ingrese un numero");
+            n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese otro numero");
+            n2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("El maximo entre dos numeros:" + n1 +"y"+ n2 + "es: " + Math.Max(n1,n2));
+            Console.WriteLine("El minimo entre dos numeros:" + n1 + "y" + n2 + "es: " + Math.Min(n1, n2));
         }
     }
 }
